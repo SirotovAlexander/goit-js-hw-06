@@ -15,5 +15,3 @@ for (let i = 0; i < ingredients.length; i += 1) {
   newIngredient.classList.add("item");
   ingredientsList.append(newIngredient);
 }
-
-console.log(ingredientsList.children);
