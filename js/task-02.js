@@ -12,6 +12,8 @@ const ingredientsList = document.querySelector("#ingredients");
 for (let i = 0; i < ingredients.length; i += 1) {
   const newIngredient = document.createElement("li");
   newIngredient.textContent = `${ingredients[i]}`;
-  newIngredient.class = "item";
+  newIngredient.classList.add("item");
   ingredientsList.append(newIngredient);
 }
+
+console.log(ingredientsList.children);
