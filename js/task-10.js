@@ -12,17 +12,20 @@ const newBox = document.querySelector("#boxes");
 
 function createBoxes(event) {
   const amount = inPut.value;
-
-  const countSize = 30;
+  // let divArray = [];
+  let sizeDefault = 30;
   for (let i = 0; i < amount; i += 1) {
+    sizeDefault += 10;
     const newDi = document.createElement("div");
     newDi.style.backgroundColor = `${getRandomHexColor()}`;
-    newDi.style.width = `${countSize + 10}px`;
-    newDi.style.height = `${countSize + 10}px`;
+    newDi.style.width = `${sizeDefault}px`;
+    newDi.style.height = `${sizeDefault}px`;
     newDi.style.marginBottom = "12px";
     newDi.style.marginTop = "12px";
+    // divArray.push(newDi);
     newBox.prepend(newDi);
   }
+  // return newBox.prepend(...divArray);
 }
 
 function destroyBoxes(event) {
