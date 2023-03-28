@@ -12,7 +12,7 @@ const newBox = document.querySelector("#boxes");
 
 function createBoxes(event) {
   const amount = inPut.value;
-  // let divArray = [];
+
   let sizeDefault = 30;
   for (let i = 0; i < amount; i += 1) {
     sizeDefault += 10;
@@ -22,10 +22,9 @@ function createBoxes(event) {
     newDi.style.height = `${sizeDefault}px`;
     newDi.style.marginBottom = "12px";
     newDi.style.marginTop = "12px";
-    // divArray.push(newDi);
+
     newBox.prepend(newDi);
   }
-  // return newBox.prepend(...divArray);
 }
 
 function destroyBoxes(event) {
