@@ -4,7 +4,8 @@ console.dir(textInput);
 textInput.addEventListener("input", inputEvent);
 
 function inputEvent(event) {
-  if ((nameOutput.textContent = "")) {
-    nameOutput.textContent = "Anonymous";
-  } else nameOutput.textContent = `${event.currentTarget.value}`;
+  nameOutput.textContent = `${event.currentTarget.value}`;
+  if (nameOutput.textContent === "") {
+    return (nameOutput.textContent = "Anonymous");
+  }
 }
