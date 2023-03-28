@@ -16,7 +16,11 @@ const images = [
 const galleryOperation = document.querySelector(".gallery");
 galleryOperation.classList.add("galleryFlex", "fix-list-style");
 
+let imgArr = "";
+
 for (let i = 0; i < images.length; i += 1) {
-  const newImg = `<li><img src="${images[i].url}" alt="${images[i].alt}" width="300" height="300"></li>`;
-  galleryOperation.insertAdjacentHTML("afterbegin", newImg);
+  let newImg = `<li><img src="${images[i].url}" alt="${images[i].alt}" width="300" height="300"></li>`;
+  imgArr += newImg;
 }
+
+galleryOperation.insertAdjacentHTML("afterbegin", imgArr);
